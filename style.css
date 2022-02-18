@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  min-height: 100vh;
+}
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.input-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: .5rem;
+  background-color: #fff;
+  padding: 2rem 2rem;
+  box-shadow: rgba(40, 40, 41, 0.397) 0px 7px 29px 0px;
+}
+
+.title {
+    color: #333;
+    padding: 1.2rem 0;
+}
+
+.input {
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 12px 25px;
+    padding-right: 50px;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    display: block;
+    box-shadow: rgba(100, 100, 111, 0.486) 0px 7px 29px 0px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input:active {
+    border: 1px solid #ccc;
+}
+
+.check-list {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #999;
+}
+
+.check-item {
+    margin-bottom: 15px;
+}
+
+.check-item.unactive {
+    color: #f00;
+}
+
+.check-item.active {
+    color: #20E3B2;
+}
+
+.check-item i {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+/* Mobile: width < 740px */
+@media (max-width: 46.1875em) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .input-wrapper {
+    width: 90%;
+  }
+  .check-item {
+    font-size: .9rem;
+  }
+}
